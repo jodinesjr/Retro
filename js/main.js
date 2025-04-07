@@ -1,5 +1,5 @@
 /**
- * Harpio Retrospective 2024 - Main JavaScript
+ * Harpio Retrospective 2025 - Main JavaScript
  * Handles slide transitions, animations, and interactions
  */
 document.addEventListener('DOMContentLoaded', function() {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="for">para</span>
                     <img src="images/chegola-logo.png" alt="Chego Lá Logo" class="chegola-logo">
                 </div>
-                <h1>Resumo Executivo - Retrospectiva 2024</h1>
+                <h1>Resumo Executivo - Retrospectiva 2025</h1>
             </div>
             
             <div class="summary-section">
