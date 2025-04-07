@@ -4,6 +4,7 @@
  */
 document.addEventListener('DOMContentLoaded', function() {
     const themeSwitch = document.getElementById('themeSwitch');
+    const themeIcon = document.getElementById('themeIcon');
     
     // Check for saved theme preference or use default
     const currentTheme = localStorage.getItem('theme') || 'dark';
@@ -12,11 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentTheme === 'light') {
         document.body.classList.add('light-theme');
         themeSwitch.checked = true;
+        updateThemeIcon(true);
     }
     
     // Handle theme switch toggle
     themeSwitch.addEventListener('change', function() {
-        if (this.checked) {
+        toggleTheme(this.checked);
+    });
+    
+    // Handle mobile theme icon click
+    if (themeIcon) {
+        themeIcon.addEventListener('click', function() {
+            const isLightTheme = !document.body.classList.contains('light-theme');
+            toggleTheme(isLightTheme);
+            themeSwitch.checked = isLightTheme;
+        });
+    }
+    
+    // Toggle theme function
+    function toggleTheme(isLightTheme) {
+        if (isLightTheme) {
             // Switch to light theme
             document.body.classList.add('light-theme');
             localStorage.setItem('theme', 'light');
@@ -25,5 +41,21 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('light-theme');
             localStorage.setItem('theme', 'dark');
         }
-    });
+        
+        updateThemeIcon(isLightTheme);
+    }
+    
+    // Update theme icon based on current theme
+    function updateThemeIcon(isLightTheme) {
+        if (!themeIcon) return;
+        
+        const iconElement = themeIcon.querySelector('i');
+        if (iconElement) {
+            if (isLightTheme) {
+                iconElement.className = 'fas fa-sun';
+            } else {
+                iconElement.className = 'fas fa-moon';
+            }
+        }
+    }
 });
