@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (index === currentSlideIndex) {
                 slide.classList.add('active');
+                
+                // Scroll to current slide on mobile
+                if (window.innerWidth <= 768) {
+                    slide.scrollIntoView({ behavior: 'smooth' });
+                }
             } else if (index < currentSlideIndex) {
                 slide.classList.add('prev');
             }
