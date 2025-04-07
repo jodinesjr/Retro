@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Executivo - Harpio para Chego Lá</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="stylesheet" href="css/theme-switch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 2rem;
+        }
+        
+        .summary-page {
+            display: block;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+        <label for="themeSwitch" class="theme-switch__label">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+        </label>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Carregando resumo executivo...</p>
+        </div>
+    </div>
+
+    <button class="print-button" onclick="window.print()"><i class="fas fa-print"></i> Imprimir</button>
+    <button class="print-button" style="right: 120px;" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Voltar</button>
+
+    <div class="summary-page">
+        <div class="summary-header">
+            <div class="logo-container">
+                <img src="images/harpio-logo.png" alt="Harpio Logo" class="harpio-logo">
+                <span class="for">para</span>
+                <img src="images/chegola-logo.png" alt="Chego Lá Logo" class="chegola-logo">
+            </div>
+            <h1>Resumo Executivo - Retrospectiva 2025</h1>
+            <p class="subtitle">Resultados dos processos de Recrutamento e Seleção</p>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Funil de Conversão / Eficiência</h3>
+            <div class="summary-data">
+                <div class="summary-item">
+                    <div class="summary-item-title">Mapeados</div>
+                    <div class="summary-item-value">625</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Apresentados / Longlist</div>
+                    <div class="summary-item-value">30</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Entrevistas</div>
+                    <div class="summary-item-value">22</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Contratados</div>
+                    <div class="summary-item-value">10</div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem;">Taxa de conversão de mapeados para contratados: <strong>1.6%</strong></p>
+            <p>Taxa de conversão de entrevistados para contratados: <strong>45.5%</strong></p>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Investimentos</h3>
+            <div class="summary-data">
+                <div class="summary-item">
+                    <div class="summary-item-title">Créditos Totais</div>
+                    <div class="summary-item-value">R$ 30.000</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Consumido</div>
+                    <div class="summary-item-value">R$ 22.000</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Contratados</div>
+                    <div class="summary-item-value">R$ 10.000</div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem;">Custo médio por contratação: <strong>R$ 2.200</strong></p>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Economia Gerada</h3>
+            <div class="summary-data">
+                <div class="summary-item">
+                    <div class="summary-item-title">Modelo Expert (10 vagas)</div>
+                    <div class="summary-item-value">R$ 75.500</div>
+                    <div class="summary-item-subtitle">10 vagas x R$ 7.550</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Modelo Sprint Harpio</div>
+                    <div class="summary-item-value">R$ 22.000</div>
+                    <div class="summary-item-subtitle">Valor consumido</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Economia Total</div>
+                    <div class="summary-item-value">R$ 53.500</div>
+                    <div class="summary-item-subtitle">70% de economia</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Créditos a Consumir</h3>
+            <div class="summary-data">
+                <div class="summary-item">
+                    <div class="summary-item-title">Total de Créditos</div>
+                    <div class="summary-item-value">14</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Pacote Start</div>
+                    <div class="summary-item-value">8</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-title">Bônus Harpio</div>
+                    <div class="summary-item-value">6</div>
+                    <div class="summary-item-subtitle">Créditos para novos contratos</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Conclusão</h3>
+            <p>A parceria entre Harpio e Chego Lá resultou em um processo de recrutamento e seleção altamente eficiente, com 10 contratações realizadas a um custo significativamente menor que o modelo tradicional.</p>
+            <p>A economia gerada de 70% (R$ 53.500) demonstra o valor agregado pela metodologia Sprint da Harpio, que manteve a qualidade das contratações enquanto otimizou os recursos investidos.</p>
+            <p>Além disso, a empresa ainda possui 14 créditos disponíveis para futuros processos seletivos, garantindo continuidade e consistência nos próximos ciclos de contratação.</p>
+        </div>
+    </div>
+
+    <script src="js/loader.js"></script>
+    <script src="js/theme-switch.js"></script>
+</body>
+</html>

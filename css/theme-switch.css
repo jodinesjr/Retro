@@ -1,0 +1,153 @@
+/* Theme Variables */
+:root {
+    /* Dark Theme (Default) */
+    --primary-color: #8A2BE2;
+    --secondary-color: #191414;
+    --text-color: #FFFFFF;
+    --background-color: #121212;
+    --card-color: #181818;
+    --highlight-color: #A45EE5;
+    --gradient-start: #4B0082;
+    --gradient-end: #9370DB;
+    --transition-speed: 0.4s;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme */
+body.light-theme {
+    --primary-color: #8A2BE2;
+    --secondary-color: #F5F5F5;
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --card-color: #F8F8F8;
+    --highlight-color: #A45EE5;
+    --gradient-start: #8A2BE2; /* Keep the same purple */
+    --gradient-end: #A45EE5; /* Keep the same purple */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-switch__input {
+    display: none;
+}
+
+.theme-switch__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 50px;
+    height: 26px;
+    background-color: var(--card-color);
+    border-radius: 100px;
+    position: relative;
+    transition: background-color 0.2s;
+    border: 1px solid var(--border-color);
+}
+
+.theme-switch__label span {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    color: var(--text-color);
+    background: none;
+    text-align: center;
+    z-index: 1;
+}
+
+.theme-switch__label::after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.theme-switch__input:checked + .theme-switch__label::after {
+    transform: translateX(24px);
+}
+
+/* Light Theme Specific Overrides */
+body.light-theme header {
+    background: none; /* Remove dark gradient */
+}
+
+body.light-theme h1 {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body.light-theme .progress-bar {
+    background: var(--primary-color);
+}
+
+body.light-theme .slide-content {
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+body.light-theme .credit-card,
+body.light-theme .comparison-item,
+body.light-theme .summary-item {
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+}
+
+body.light-theme .credit-card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme button {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+body.light-theme .nav-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+body.light-theme .circle-bg {
+    stroke: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .percentage {
+    fill: var(--text-color);
+}
+
+/* Adjust loader for light theme */
+body.light-theme #loader-wrapper {
+    --loader-background: rgba(255, 255, 255, 0.95);
+    --loader-text-color: #333333;
+}
+
+body.light-theme .spinner {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Logo handling for different themes */
+.harpio-logo {
+    filter: brightness(0) invert(1); /* White logo for dark theme */
+}
+
+body.light-theme .harpio-logo {
+    filter: none; /* Use original logo in light mode */
+}

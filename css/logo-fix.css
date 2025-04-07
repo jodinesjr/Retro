@@ -1,0 +1,11 @@
+/* CSS filter to make the logo appear white */
+.harpio-logo {
+    filter: brightness(0) invert(1); /* This converts the logo to white */
+    height: 60px; /* Maintaining the larger size */
+    object-fit: contain;
+}
+
+/* For the final logo in the last slide */
+.final-logo.harpio-logo {
+    filter: brightness(0) invert(1);
+}
