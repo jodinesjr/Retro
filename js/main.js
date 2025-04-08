@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="summary-item">
                         <div class="summary-item-title">Entrevistas</div>
-                        <div class="summary-item-value">22</div>
+                        <div class="summary-item-value">23</div>
                     </div>
                     <div class="summary-item">
                         <div class="summary-item-title">Contratados</div>
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="summary-item">
                         <div class="summary-item-title">Consumido</div>
-                        <div class="summary-item-value">R$ 22.000</div>
+                        <div class="summary-item-value">R$ 23.000</div>
                     </div>
                     <div class="summary-item">
                         <div class="summary-item-title">Contratados</div>
@@ -178,11 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="summary-data">
                     <div class="summary-item">
                         <div class="summary-item-title">Total de Créditos</div>
-                        <div class="summary-item-value">14</div>
+                        <div class="summary-item-value">13</div>
                     </div>
                     <div class="summary-item">
                         <div class="summary-item-title">Pacote Start</div>
-                        <div class="summary-item-value">8</div>
+                        <div class="summary-item-value">7</div>
                     </div>
                     <div class="summary-item">
                         <div class="summary-item-title">Bônus Harpio</div>
